@@ -1,8 +1,16 @@
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
+class EntrepriseModel {
+    public static function insertEntreprise($name,$siege,$pass){
+       
+       $b=new EntrepriseGateway(new Connection());
+       $b->insert($name, $siege, $pass);
+    }
+    
+    public static function getMdpEntreprise($nameEnt){
+        $b=new EntrepriseGateway(new Connection());
+        $res = $b->selectMDPEnt($nameEnt);
+        return $res;
+    }
+}

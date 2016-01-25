@@ -46,7 +46,7 @@
         <div>
                             <?php 
                                 if(isset($tabBool['siege']))
-                                    if(!$tabBool['siege']) echo'<p id="formErreur">Champ invalide"</p>'; 
+                                    if(!$tabBool['siege']) echo'<p id="formErreur">Champ invalide</p>'; 
                             ?>
                     </div>
         

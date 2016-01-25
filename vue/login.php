@@ -34,8 +34,8 @@
         
         <div>
                             <?php 
-                                if(isset($tabBool['login']))
-                                    if(!$tabBool['login']) echo'<p id="formErreur">Identifiant invalide</p>'; 
+                                if(isset($tabBool['name']))
+                                    if(!$tabBool['name']) echo'<p id="formErreur">Raison Sociale invalide</p>'; 
                             ?>
                     </div>
         

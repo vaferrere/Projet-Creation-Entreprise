@@ -47,6 +47,8 @@ class Validation {
         {
             case 'commentaire':
             case 'objet':
+            case 'name':
+            case 'siege':
             case 'action':
                 $filter = 1;
             break;

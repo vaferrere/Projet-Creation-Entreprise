@@ -67,6 +67,7 @@
         }
         
         function validationInscription(){
+            global $rep,$vue;
             if(!isset($_POST['name'])){
                 $_POST['name']='';
             }
@@ -97,11 +98,59 @@
             //Si le formulaire est valide on insert les données ! 
             if ($formValid)
             {
-                
+                EntrepriseModel::insertEntreprise($tabVal['name'], $tabVal['siege'], $tabVal['password']);
+                require($rep.$vue['login']);
             }
+            else
+                require($rep.$vue['inscription']);
+            
             
         }
     
+        
+        function validationConnexion(){
+             global $rep,$vue;
+            if(!isset($_POST['login'])){
+                $_POST['login']='';
+            }
+            if(!isset($_POST['password'])){
+                $_POST['password']='';
+            }
+            
+           $formValid = true;
+            
+            $tabVal['name']=$_POST['login'];
+            $tabVal['password']=$_POST['password'];
+            
+             $tabVal = Validation::cleanTab($tabVal);        
+            $tabBool = Validation::validateTab($tabVal);
+            
+            
+             //Test si le formulaire est valide 
+            foreach($tabBool as $key => $value)
+            {
+                if (!$value)
+                    $formValid = false;               
+            }    
+
+
+            //Si le formulaire est valide on insert les données ! 
+            if ($formValid)
+            {
+                $res= EntrepriseModel::getMdpEntreprise($tabVal['name']);
+               
+                $mdp = $res[0][0];
+                if(password_verify($tabVal['password'], $mdp)){
+                    $_SESSION['connect']=true;
+                    $_SESSION['name']=$tabVal['name'];
+                    require($rep.$vue['portail']);
+                }
+                $tabBool['password']=0;
+               
+            }
+             else require($rep.$vue['login']);
+            
+        }
      }
     
     
