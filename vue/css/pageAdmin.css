@@ -1,0 +1,46 @@
+body{
+	background-image: url(../image/background3.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  width: 98%;
+}
+
+h2{
+  font-size: 30px;
+  margin-top: 90px;
+}
+
+#haut{
+	margin-top: 20px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+#logo{
+	width: 50%;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 10px;
+  text-align: right;
+  margin-right: 0px;
+}
+
+.footer .container{
+  margin-right: 10px;
+}
+
+table{
+    margin-left: 50px;
+}
+
+td{
+    padding-left: 20px;
+}
+th{
+    padding-left: 20px;
+}
