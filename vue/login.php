@@ -23,7 +23,7 @@
               include("barreMenu.php");
             ?>
   
-    <div class="container">
+    <!--<div class="container">
         <h2 class="form-signin-heading">Veuillez vous connecter</h2>
       <form class="form-signin" action="index.php?action=validationConnexion" method="POST">
         <fieldset>
@@ -34,8 +34,8 @@
         
         <div>
                             <?php 
-                                if(isset($tabBool['name']))
-                                    if(!$tabBool['name']) echo'<p id="formErreur">Raison Sociale invalide</p>'; 
+                                if(isset($tabBool['login']))
+                                    if(!$tabBool['login']) echo'<p id="formErreur">Raison Sociale invalide</p>'; 
                             ?>
                     </div>
         
@@ -57,7 +57,7 @@
 
         <div class="row bg-info">
             <p>Je ne suis pas encore inscrit :</p><a href="index.php?action=inscription"> accès page inscription</a>
-        </div>
+        </div>-->
         
         
     </div> <!-- /container -->
@@ -66,3 +66,6 @@
    
   </body>
 </html>
+<?php
+include("barreRecherche.php");
+?>

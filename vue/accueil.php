@@ -19,7 +19,7 @@
                            
                             <div  style="text-align: center">
                                 <h2 style="margin-top: 3%;"> 2015-2016 &copy; DELAHAYE | FERRERE IUT Clermont-Ferrand</h2>
-                            <h1>Avancement du site [99%]</h1>
+                            <h1>Avancement du site [12%]</h1>
                             <div class="progress progress-striped active">
                                 <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100" style="width: 12%">
                                        <span class="sr-only">12% Complete</span>
